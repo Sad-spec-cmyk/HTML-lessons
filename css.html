@@ -35,6 +35,7 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     a {
@@ -151,6 +152,10 @@
       font: inherit;
       font-size: 15px;
       cursor: pointer;
+      min-width: 0;
+      max-width: 100%;
+      white-space: normal;
+      text-align: center;
     }
 
     .button.primary {
@@ -196,6 +201,14 @@
     }
 
     main {
+      min-width: 0;
+    }
+
+    .section,
+    .section-content,
+    .info-card,
+    .doc-card,
+    .example-card {
       min-width: 0;
     }
 
@@ -289,6 +302,9 @@
       padding: 2px 6px;
       font-family: Consolas, "Courier New", monospace;
       font-size: 0.95em;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .search-panel {
@@ -328,12 +344,14 @@
 
     .doc-card {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: 8px;
     }
 
     .doc-card dl {
       margin: 0;
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: 8px;
     }
 
@@ -352,11 +370,14 @@
     .code-wrap {
       position: relative;
       margin: 12px 0 0;
+      max-width: 100%;
+      min-width: 0;
     }
 
     pre {
       margin: 0;
       overflow-x: auto;
+      max-width: 100%;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       background: var(--code-bg);
@@ -452,6 +473,53 @@
 
       .section-header h2 {
         font-size: 21px;
+      }
+
+      .hero,
+      .layout,
+      .footer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .section-content {
+        padding: 12px;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .doc-card h3,
+      .info-card h3,
+      .example-card h3 {
+        overflow-wrap: anywhere;
+      }
+
+      .doc-card,
+      .doc-card dl,
+      .doc-card dt,
+      .doc-card dd,
+      .info-card,
+      .example-card {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .badge {
+        display: inline;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+
+      .copy-btn {
+        position: static;
+        margin-bottom: 8px;
+      }
+
+      pre {
+        font-size: 13px;
+        padding: 12px;
       }
     }
   </style>
