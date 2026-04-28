@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Lessons / HTML Довідник</title>
   <style>
-    /* Базові змінні для мінімалістичного оформлення */
     :root {
       --bg: #f6f7f8;
       --surface: #ffffff;
@@ -500,7 +499,7 @@
 
   <section class="hero" id="home">
     <h1>HTML Lessons</h1>
-    <p>Простий український довідник по HTML тегах, структурі документа та основних елементах веб-сторінки.</p>
+    <p>Простий довідник по HTML тегах, структурі документа та основних елементах веб-сторінки.</p>
     <div class="hero-actions">
       <a class="button primary" href="#structure">Почати</a>
       <a class="button" href="#tags">Всі HTML теги</a>
@@ -628,13 +627,7 @@
       </section>
     </main>
   </div>
-
-  <footer class="footer">
-    <p>HTML Lessons / HTML Довідник. Один офлайн-файл без фреймворків і бібліотек.</p>
-  </footer>
-
   <script>
-    // Дані тегів: з них JavaScript будує повну документацію на сторінці.
     const tagDocs = [
       { tag: "<html>", category: "Основні", description: "Кореневий елемент HTML-документа.", usage: "Огортає весь документ і задає мову через атрибут lang.", example: '<html lang="uk">...</html>', attrs: "lang", note: "На сторінці має бути один елемент <html>." },
       { tag: "<head>", category: "Основні", description: "Службова частина документа.", usage: "Містить метадані, назву вкладки, стилі та підключення ресурсів.", example: "<head>\n  <title>Сайт</title>\n</head>", attrs: "Немає обов’язкових.", note: "Вміст <head> зазвичай не показується на сторінці." },
